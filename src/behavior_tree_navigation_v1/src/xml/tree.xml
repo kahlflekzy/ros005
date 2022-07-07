@@ -1,0 +1,10 @@
+ <root main_tree_to_execute = "MainTree" >
+     <BehaviorTree ID="MainTree">
+        <Sequence name="root_sequence">
+            <TaskListener message="{number_of_goals}"/>
+            <Inverter>
+                <ExecuteGoals message="{number_of_goals}"/>
+            </Inverter>
+        </Sequence>
+     </BehaviorTree>
+ </root>

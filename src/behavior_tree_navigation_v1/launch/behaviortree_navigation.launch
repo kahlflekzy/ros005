@@ -1,0 +1,7 @@
+<launch>
+    <arg name="init_base" default="1"/>
+    <arg name="package" value="$(find behavior_tree_navigation_v1)"/>
+<!--    <node pkg="behavior_tree_navigation_v1" name="task_publisher" type="task_publisher.py" output="screen"/>-->
+    <node pkg="behavior_tree_navigation_v1" name="actions_server" type="actions_server.py" args="$(arg package) $(arg init_base)" output="screen"/>
+    <node pkg="behavior_tree_navigation_v1" name="behaviortree" type="behaviortree_node" args="$(arg package)" output="screen"/>
+</launch>
